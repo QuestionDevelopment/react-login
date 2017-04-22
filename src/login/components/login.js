@@ -9,8 +9,8 @@ class Login extends Component {
       <div>
         <div>Login</div>
         <Form>
-          <Text />
-          <Text />
+          <Text name="email"/>
+          <Text name="password"/>
           <Button value="Submit" />
         </Form>
       </div>
