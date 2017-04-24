@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
+import Formsy from 'formsy-react';
 import Text from '../../common/components/text';
-import Form from '../../common/components/form';
-import Button from '../../common/components/button';
 
 class Login extends Component {
+  
+  getInitialState() {
+    return {
+      canSubmit: false
+    }
+  }
+  enableButton() {
+    this.setState({
+      canSubmit: true
+    });
+  }
+  disableButton() {
+    this.setState({
+      canSubmit: false
+    });
+  }
+  submit(model) {
+    
+  }
   render() {
     return (
       <div>
         <div>Login</div>
-        <Form>
-          <Text name="email"/>
-          <Text name="password"/>
-          <Button value="Submit" />
-        </Form>
+        <Formsy.Form onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
+          <Text name="email" validations="isEmail" validationError="This is not a valid email" required/>
+          <Text name="password" validations="isEmail" validationError="This is not a valid password" required/>
+          <button type="submit" disabled={!this.state.canSubmit}>Submit</button>
+        </Formsy.Form>
       </div>
     );
   }
