@@ -3,12 +3,18 @@ import Formsy from 'formsy-react';
 import Text from '../../common/components/text';
 
 class Login extends Component {
-  
-  getInitialState() {
-    return {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
       canSubmit: false
-    }
+    };
+
+    this.enableButton = this.enableButton.bind(this);
+    this.disableButton = this.disableButton.bind(this);
   }
+
   enableButton() {
     this.setState({
       canSubmit: true
