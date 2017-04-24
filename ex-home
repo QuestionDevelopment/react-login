@@ -1,0 +1,10 @@
+Home
+
+render() {
+  <div>
+    <header />
+      {this.props.children}
+    <footer/>
+  </div>
+
+}
