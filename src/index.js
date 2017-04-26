@@ -8,9 +8,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 const history = createBrowserHistory()
 
 ReactDOM.render(
-  <Router
-    history={history}
-  >
+  <Router history={history} >
     <Routes />
   </Router>
   ,

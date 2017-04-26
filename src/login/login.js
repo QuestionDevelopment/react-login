@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
-import Text from '../../common/components/text';
+import Text from '../common/components/text';
 
 class Login extends Component {
 
