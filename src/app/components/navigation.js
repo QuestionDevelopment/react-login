@@ -3,24 +3,33 @@ import React, { Component } from 'react';
 class Navigation extends Component {
   render() {
     return (
-      <nav class="navigation">
-        <a href="#" class="menu-icon">
-          <i class="fa fa-bars"></i>
-        </a>
-        <ul class="main-navigation">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#creativity">Creativity</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#help">Help</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#video">Video</a></li>
-          <li><a href="#why-us">Why us?</a></li>
-          <li><a href="#quote">Quote</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div id="menu">
+        <section className="menu-section">
+          <h3 className="menu-section-title">Site</h3>
+          <ul className="menu-section-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Recently Viewed</a></li>
+            <li><a href="#">Top Rated</a></li>
+            <li><a href="#">Submit New Product</a></li>
+          </ul>
+        </section>
+        <section className="menu-section">
+          <h3 className="menu-section-title">Account</h3>
+          <ul className="menu-section-list">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Forgot Password</a></li>
+          </ul>
+        </section>
+        <section className="menu-section">
+          <h3 className="menu-section-title">Other</h3>
+          <ul className="menu-section-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </section>
+      </div>
     );
   }
 }
