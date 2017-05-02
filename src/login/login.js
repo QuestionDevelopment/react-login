@@ -25,8 +25,21 @@ class Login extends Component {
       canSubmit: false
     });
   }
-  submit(model) {
-    
+  async submit(model) {
+    // async function () {
+    //   try {
+    //     data = await api.('as');
+    //   } catch (e) {
+    //     // error
+    //   }
+    //   if (data) {
+    //     browserHistory.push('/dashboard');
+    //   } else {
+    //     this.setState{
+    //       errorMsg: 'Password is wrong'
+    //     }
+    //   }
+    // }
   }
   render() {
     return (
