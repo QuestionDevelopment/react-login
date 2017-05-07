@@ -5,7 +5,7 @@ class Button extends Component {
     return (
       <div>
         <button>
-          {this.props.value}
+          {this.props.value}xxx
         </button>
       </div>
     );
