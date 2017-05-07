@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
-// 'react-router'
+import {browserHistory} from 'react-router';
+import {Button} from './button';
 
 class Form extends Component {
   onSubmit(values) {
@@ -24,10 +25,12 @@ class Form extends Component {
     return (
       <Formsy.Form
         onSubmit={this.onSubmit}
+        onValidSubmit={this.submit}
+        onValid={this.enableButton}
+        onInvalid={this.disableButton}
       >
-        {/* Children goes here */}
         {this.props.children}
-        <Button className={`button ${this.state.canSubmit ? 'button-primary' : 'button-secondary'}`} value="Submit" />
+        <Button className={`button ${this.state.canSubmit ? 'button-primary' : 'button-secondary'}`} value={`${this.props.button ? this.props.button : 'Submit'}`} />
       </Formsy.Form>
     );
   }

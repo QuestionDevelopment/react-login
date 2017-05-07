@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Formsy from 'formsy-react';
+import Form from '../common/components/form';
 import Text from '../common/components/text';
 
 class Home extends Component {
@@ -36,10 +36,9 @@ class Home extends Component {
             <div className="row">
               <div className="one-half column">
                 <h4 className="hero-heading">Because life is too short for crappy products.</h4>
-                <Formsy.Form id="home-page-search" onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
+                <Form button="Search">
                   <Text name="q" required/>
-                  <button className="button button-primary" type="submit" disabled={!this.state.canSubmit}>Search</button>
-                </Formsy.Form>
+                </Form>
               </div>
               <div className="one-half column phones">
                 <img className="phone" alt="" src="/images/iphone.png" />
@@ -54,10 +53,10 @@ class Home extends Component {
             <p className="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
             <div className="row">
               <div className="one-half column category">
-                <img className="u-max-full-width" src="https://placehold.it/350x150" />
+                <img className="u-max-full-width" src="https://placehold.it/350x150" alt="" />
               </div>
               <div className="one-half column category">
-                <img className="u-max-full-width" src="https://placehold.it/350x150" />
+                <img className="u-max-full-width" src="https://placehold.it/350x150" alt="" />
               </div>
             </div>
           </div>
