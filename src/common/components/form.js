@@ -18,7 +18,7 @@ class Form extends Component {
       >
         {/* Children goes here */}
         {this.props.children}
-        <Button />
+        <Button type="submit" name="{this.props.button}"/>
       </Formsy.Form>
     );
   }
