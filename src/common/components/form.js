@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import {browserHistory} from 'react-router';
-import {Button} from './button';
+import Button from './button';
 
 class Form extends Component {
   onSubmit(values) {
