@@ -45,11 +45,10 @@ class Login extends Component {
     return (
       <div>
         <div>Login</div>
-        <Formsy.Form onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
+        <Form id="home-page-search" button="Search">
           <Text name="email" validations="isEmail" validationError="This is not a valid email" required/>
           <Text name="password" validations="isEmail" validationError="This is not a valid password" required/>
-          <button type="submit" disabled={!this.state.canSubmit}>Submit</button>
-        </Formsy.Form>
+        </Form>
       </div>
     );
   }

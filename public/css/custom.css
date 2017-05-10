@@ -188,21 +188,21 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 .phone + .phone {
   display: none;
 }
-#home-page-search div {
-  display: inline-block;
-}
-#home-page-search input {
-  width:300px;
-}
-#home-page-search button {
-  display: inline-block;
-  margin-left:5px;
-}
 .background-image {
 	background-image: url('../images/values-bg.jpg');
 	background-size: cover;
 	color: #fff;
 	padding-bottom: 5rem;
+}
+#home .formComponent div {
+  display: inline-block;
+}
+#home .formComponent input {
+  width:300px;
+}
+#home .formComponent button {
+  display: inline-block;
+  margin-left:5px;
 }
 
 /**************************************

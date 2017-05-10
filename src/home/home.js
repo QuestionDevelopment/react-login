@@ -3,31 +3,6 @@ import Form from '../common/components/form';
 import Text from '../common/components/text';
 
 class Home extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      canSubmit: false
-    };
-
-    this.enableButton = this.enableButton.bind(this);
-    this.disableButton = this.disableButton.bind(this);
-  }
-
-  enableButton() {
-    this.setState({
-      canSubmit: true
-    });
-  }
-  disableButton() {
-    this.setState({
-      canSubmit: false
-    });
-  }
-  submit(model) {
-    
-  }
   render() {
     return (
       <div id="home">
@@ -36,7 +11,7 @@ class Home extends Component {
             <div className="row">
               <div className="one-half column">
                 <h4 className="hero-heading">Because life is too short for crappy products.</h4>
-                <Form button="Search">
+                <Form id="home-page-search" button="Search">
                   <Text name="q" required/>
                 </Form>
               </div>
