@@ -13,6 +13,7 @@ class Form extends Component {
 
     this.enableButton = this.enableButton.bind(this);
     this.disableButton = this.disableButton.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   enableButton() {
@@ -26,7 +27,7 @@ class Form extends Component {
     });
   }
   onSubmit(values) {
-    console.log(values);
+    this.props.onSubmit(values);
     browserHistory.push(`/search/${values.query}`);
   }
   render() {

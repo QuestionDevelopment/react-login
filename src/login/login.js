@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Formsy from 'formsy-react';
+import Form from '../common/components/form';
 import Text from '../common/components/text';
 
 class Login extends Component {
@@ -25,6 +25,10 @@ class Login extends Component {
       canSubmit: false
     });
   }
+  onSubmit(values) {
+    console.log(values);
+  }
+
   async submit(model) {
     // async function () {
     //   try {
@@ -45,7 +49,7 @@ class Login extends Component {
     return (
       <div>
         <div>Login</div>
-        <Form id="home-page-search" button="Search">
+        <Form id="home-page-search" button="Search" onSubmit={this.onSubmit}>
           <Text name="email" validations="isEmail" validationError="This is not a valid email" required/>
           <Text name="password" validations="isEmail" validationError="This is not a valid password" required/>
         </Form>
