@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
-import {browserHistory} from 'react-router';
 import Button from './button';
 
 class Form extends Component {
@@ -28,7 +27,7 @@ class Form extends Component {
   }
   onSubmit(values) {
     this.props.onSubmit(values);
-    browserHistory.push(`/search/${values.query}`);
+    this.context.router.history.push(`/search/${values.query}`);
   }
   render() {
     return (
@@ -45,6 +44,12 @@ class Form extends Component {
       </Formsy.Form>
     );
   }
+}
+
+Form.contextTypes = {
+  router: React.PropTypes.shape({
+    history: React.PropTypes.object,
+  }),
 }
 
 export default Form;
