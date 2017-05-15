@@ -30,6 +30,7 @@ class Login extends Component {
   }
 
   async submit(model) {
+    console.log('test');
     // async function () {
     //   try {
     //     data = await api.('as');
@@ -49,9 +50,9 @@ class Login extends Component {
     return (
       <div>
         <div>Login</div>
-        <Form id="home-page-search" button="Search" onSubmit={this.onSubmit}>
+        <Form id="login-form" button="Login" onSubmit={this.onSubmit}>
           <Text name="email" validations="isEmail" validationError="This is not a valid email" required/>
-          <Text name="password" validations="isEmail" validationError="This is not a valid password" required/>
+          <Text name="password" validations="isLength:7" validationError="This is not a valid password.  It must be 7 characters long" required/>
         </Form>
       </div>
     );

@@ -27,7 +27,6 @@ class Form extends Component {
   }
   onSubmit(values) {
     this.props.onSubmit(values);
-    this.context.router.history.push(`/search/${values.query}`);
   }
   render() {
     return (
@@ -44,12 +43,6 @@ class Form extends Component {
       </Formsy.Form>
     );
   }
-}
-
-Form.contextTypes = {
-  router: React.PropTypes.shape({
-    history: React.PropTypes.object,
-  }),
 }
 
 export default Form;

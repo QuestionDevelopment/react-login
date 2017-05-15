@@ -3,6 +3,9 @@ import Form from '../common/components/form';
 import Text from '../common/components/text';
 
 class Home extends Component {
+  onSubmit(values) {
+    this.context.router.history.push(`/search/${values.query}`);
+  }
   render() {
     return (
       <div id="home">
@@ -11,7 +14,7 @@ class Home extends Component {
             <div className="row">
               <div className="one-half column">
                 <h4 className="hero-heading">Because life is too short for crappy products.</h4>
-                <Form id="home-page-search" button="Search">
+                <Form id="home-page-search" button="Search" onSubmit={this.onSubmit}>
                   <Text name="q" required/>
                 </Form>
               </div>
@@ -67,6 +70,12 @@ class Home extends Component {
       </div>
     );
   }
+}
+
+Form.contextTypes = {
+  router: React.PropTypes.shape({
+    history: React.PropTypes.object,
+  }),
 }
 
 export default Home;
