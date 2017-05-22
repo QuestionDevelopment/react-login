@@ -3,8 +3,15 @@ import Form from '../common/components/form';
 import Text from '../common/components/text';
 
 class Home extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
   onSubmit(values) {
-    this.context.router.history.push(`/search/${values.query}`);
+    this.context.router.history.push(`/search/${values.q}`);
   }
   render() {
     return (
@@ -72,7 +79,7 @@ class Home extends Component {
   }
 }
 
-Form.contextTypes = {
+Home.contextTypes = {
   router: React.PropTypes.shape({
     history: React.PropTypes.object,
   }),
