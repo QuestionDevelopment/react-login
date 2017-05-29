@@ -25,11 +25,11 @@ class Login extends Component {
       canSubmit: false
     });
   }
-  onSubmit(values) {
-    console.log(values);
-  }
+  // onSubmit(values) {
+  //   console.log(values);
+  // }
 
-  async submit(model) {
+  async onSubmit(model) {
     console.log('test');
     // async function () {
     //   try {
